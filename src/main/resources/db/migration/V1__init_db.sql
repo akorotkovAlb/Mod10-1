@@ -20,9 +20,7 @@ CONSTRAINT project_client_fk FOREIGN KEY (client_id) REFERENCES client (id)
 );
 
 CREATE TABLE project_worker(
+id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 project_id BIGINT NOT NULL,
-worker_id BIGINT NOT NULL,
-PRIMARY KEY(project_id, worker_id),
-FOREIGN KEY(project_id) REFERENCES project(id),
-FOREIGN KEY(worker_id) REFERENCES worker(id)
+worker_id BIGINT NOT NULL
 );
