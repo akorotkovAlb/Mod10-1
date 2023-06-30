@@ -36,6 +36,12 @@ public class Main {
 //            existing.setName("Modified Taras");
 //            session.persist(existing);
 //        transaction.commit();
-//        session.close();
+
+//        // TODO delete worker
+//        Transaction transaction = session.beginTransaction();
+//            Worker existing = session.get(Worker.class, 1L);
+//            session.remove(existing);
+//        transaction.commit();
+        session.close();
     }
 }
