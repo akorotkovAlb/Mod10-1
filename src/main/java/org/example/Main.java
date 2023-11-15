@@ -37,11 +37,23 @@ public class Main {
 //            session.persist(existing);
 //        transaction.commit();
 
+//        // TODO update worker use merge
+//        Transaction transaction = session.beginTransaction();
+//            Worker mergeWorker = new Worker();
+//            mergeWorker.setId(1L);
+//            mergeWorker.setName("Taras");
+//            mergeWorker.setBirthday(LocalDate.of(2001, 12, 21));
+//            mergeWorker.setSalary(5001);
+//            mergeWorker.setLevels(Level.MIDDLE);
+//            session.merge(mergeWorker);
+//        transaction.commit();
+
 //        // TODO delete worker
 //        Transaction transaction = session.beginTransaction();
 //            Worker existing = session.get(Worker.class, 1L);
 //            session.remove(existing);
 //        transaction.commit();
+
         session.close();
     }
 }
